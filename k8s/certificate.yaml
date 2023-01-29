@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: toppietopo-xyz-tls
+spec:
+  secretName: toppietopo-xyz
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: toppietopo.xyz
+  dnsNames:
+    - toppietopo.xyz
+    - www.toppietopo.xyz
